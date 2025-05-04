@@ -15,8 +15,10 @@ void print_test(int* array, int size, int* expected, string test_name) {
 	h = GetStdHandle(STD_OUTPUT_HANDLE);
 
 	bool result = true;
-	
+
 	if (size > 0 && array != nullptr) {
+		reverse(array, size);
+
 		for (int i = 0; i < size; i++)
 		{
 			if (array[i] != expected[i]) {
